@@ -1,6 +1,5 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
-import backgroundImg from './images/background.jpg';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Blog from './components/Blog/Blog';
 import Contact from './components/Contact/Contact';
@@ -12,15 +11,7 @@ import News from './components/News/News';
 
 function App() {
   return (
-    <div 
-    style={{ 
-      backgroundImage: `url(${backgroundImg})`, 
-      width:'100%', 
-      backgroundSize: 'cover', 
-      backgroundRepeat: 'no-repeat' 
-    }} 
-    className="App"
-    >
+    <div className="App bg-overlay">
       <BrowserRouter>
       <Header></Header>
         <Routes>
