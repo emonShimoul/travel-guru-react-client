@@ -1,12 +1,13 @@
 import React from 'react';
-import { Button, Container, Form, Nav, Navbar, NavDropdown } from 'react-bootstrap';
+import { Button, Container, Form, InputGroup, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import logo from '../../images/logo.png';
+import './Header.css';
 
 const Header = () => {
     return (
         <div>
-            <Navbar bg="light" expand="lg">
+            <Navbar expand="lg">
                 <Container>
                     <Navbar.Brand className='me-5'>
                         <Link to='/home'><img style={{width: '100px'}} src={logo} /></Link>
@@ -17,13 +18,13 @@ const Header = () => {
                             <Form.Control
                             type="search"
                             placeholder="Search Your Destination..."
-                            className="me-2 pe-5"
+                            className="me-2 pe-5 input-bg border border-white"
                             aria-label="Search"
                             />
-                            <Button variant="outline-success">Search</Button>
+                            <Button variant="outline-dark">Search</Button>
                         </Form>
                         <Nav
-                            className="my-2 my-lg-0"
+                            className="my-2 my-lg-c0"
                             style={{ maxHeight: '100px' }}
                             navbarScroll
                         >

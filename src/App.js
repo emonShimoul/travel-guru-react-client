@@ -13,7 +13,12 @@ import News from './components/News/News';
 function App() {
   return (
     <div 
-    style={{ backgroundImage: `url(${backgroundImg})`, width:'100%', backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }} 
+    style={{ 
+      backgroundImage: `url(${backgroundImg})`, 
+      width:'100%', 
+      backgroundSize: 'cover', 
+      backgroundRepeat: 'no-repeat' 
+    }} 
     className="App"
     >
       <BrowserRouter>
