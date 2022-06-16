@@ -24,10 +24,10 @@ const Home = () => {
     return (
         <div className='container'>
            <div className='row mt-5'>
-                <div className='col-md-4 text-white'>
+                <div className='col-md-5 text-white'>
                     <h1>Cox's Bazar</h1>
                 </div>
-                <div className="col-md-8 text-center my-3">
+                <div className="col-md-7 text-center my-3">
                     <div className="row mx-auto my-auto justify-content-center">
                         <div id="recipeCarousel" className="carousel slide" data-bs-ride="carousel">
                             <div className="carousel-inner" role="listbox">
