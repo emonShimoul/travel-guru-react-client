@@ -1,6 +1,8 @@
 import React from 'react';
 import './Home.css';
 import sajek from '../../images/Sajek.png';
+import sreemongol from '../../images/Sreemongol.png';
+import sundorbon from '../../images/sundorbon.png';
 import './slider';
 
 const Home = () => {
@@ -26,9 +28,9 @@ const Home = () => {
                                 <div className="col-md-3">
                                     <div className="card">
                                         <div className="card-img">
-                                            <img src={sajek} alt="" className="img-fluid" />
+                                            <img src={sreemongol} alt="" className="img-fluid" />
                                         </div>
-                                        <div className="card-img-overlay">Slide 3</div>
+                                        <div className="card-img-overlay">Slide 2</div>
                                     </div>
                                 </div>
                             </div>
@@ -36,9 +38,9 @@ const Home = () => {
                                 <div className="col-md-3">
                                     <div className="card">
                                         <div className="card-img">
-                                            <img src="//via.placeholder.com/500x400?text=4" alt="" className="img-fluid" />
+                                            <img src={sundorbon} alt="" className="img-fluid" />
                                         </div>
-                                        <div className="card-img-overlay">Slide 4</div>
+                                        <div className="card-img-overlay">Slide 3</div>
                                     </div>
                                 </div>
                             </div>

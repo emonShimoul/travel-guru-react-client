@@ -21,7 +21,7 @@ const Header = () => {
                             className="me-2 input-bg border border-white"
                             aria-label="Search"
                             />
-                            <Button variant="outline-light">Search</Button>
+                            <Button variant="btn btn-light">Search</Button>
                         </Form>
                         <Nav
                             className="my-2 my-lg-c0"
