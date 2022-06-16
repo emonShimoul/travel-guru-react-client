@@ -5,6 +5,7 @@ import logo from '../../images/logo.png';
 import './Header.css';
 
 const Header = () => {
+    const textLight = "text-light";
     return (
         <div>
             <Navbar expand="lg" className='pt-4'>
@@ -28,10 +29,10 @@ const Header = () => {
                             style={{ maxHeight: '100px' }}
                             navbarScroll
                         >
-                            <Link className='text-decoration-none text-light navlink' to='/news'>News</Link>
-                            <Link className='text-decoration-none text-light navlink' to='/destination'>Destination</Link>
-                            <Link className='text-decoration-none text-light navlink' to='/blog'>Blog</Link>
-                            <Link className='text-decoration-none text-light navlink' to='/contact'>Contact</Link>
+                            <Link className={`text-decoration-none ${textLight} navlink`} to='/news'>News</Link>
+                            <Link className={`text-decoration-none ${textLight} navlink`} to='/destination'>Destination</Link>
+                            <Link className={`text-decoration-none ${textLight} navlink`} to='/blog'>Blog</Link>
+                            <Link className={`text-decoration-none ${textLight} navlink`} to='/contact'>Contact</Link>
                         </Nav>
                             <Button className='ms-3' variant="warning"><Link className='text-decoration-none text-dark' to='/login'>Login</Link></Button>
                     </Navbar.Collapse>
