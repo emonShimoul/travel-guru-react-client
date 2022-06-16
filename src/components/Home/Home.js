@@ -3,7 +3,6 @@ import './Home.css';
 import sajek from '../../images/Sajek.png';
 import sreemongol from '../../images/Sreemongol.png';
 import sundorbon from '../../images/sundorbon.png';
-import './slider';
 
 const Home = () => {
     let items = document.querySelectorAll('.carousel .carousel-item');
@@ -29,7 +28,6 @@ const Home = () => {
                     <h1>Cox's Bazar</h1>
                 </div>
                 <div className="col-md-8 text-center my-3">
-                    <h2 className="font-weight-light">Bootstrap Multi Slide Carousel</h2>
                     <div className="row mx-auto my-auto justify-content-center">
                         <div id="recipeCarousel" className="carousel slide" data-bs-ride="carousel">
                             <div className="carousel-inner" role="listbox">
