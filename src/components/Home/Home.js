@@ -27,50 +27,26 @@ const Home = () => {
                 <div className='col-md-5 text-white'>
                     <h1>Cox's Bazar</h1>
                 </div>
-                <div className="col-md-7 text-center my-3">
-                    <div className="row mx-auto my-auto justify-content-center">
-                        <div id="recipeCarousel" className="carousel slide" data-bs-ride="carousel">
-                            <div className="carousel-inner" role="listbox">
-                                <div className="carousel-item active">
-                                    <div className="col-md-3">
-                                        <div className="card">
-                                            <div className="card-img">
-                                                <img src={sajek} alt="" className="img-fluid" />
-                                            </div>
-                                            <div className="card-img-overlay">Slide 1</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="carousel-item">
-                                    <div className="col-md-3">
-                                        <div className="card">
-                                            <div className="card-img">
-                                                <img src={sreemongol} alt="" className="img-fluid" />
-                                            </div>
-                                            <div className="card-img-overlay">Slide 2</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="carousel-item">
-                                    <div className="col-md-3">
-                                        <div className="card">
-                                            <div className="card-img">
-                                                <img src={sundorbon} alt="" className="img-fluid" />
-                                            </div>
-                                            <div className="card-img-overlay">Slide 3</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <a className="bg-transparent w-aut" href="#recipeCarousel" role="button" data-bs-slide="prev">
-                                <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                            </a>
-                            <a className="bg-transparent w-aut" href="#recipeCarousel" role="button" data-bs-slide="next">
-                                <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                            </a>
+                <div id="carouselExampleControls" className="carousel slide col-md-7" data-bs-ride="carousel">
+                    <div className="carousel-inner">
+                        <div className="carousel-item active">
+                        <img src={sajek} className="d-block w-100" alt="" />
+                        </div>
+                        <div className="carousel-item">
+                        <img src={sreemongol} className="d-block w-100" alt="" />
+                        </div>
+                        <div className="carousel-item">
+                        <img src={sundorbon} className="d-block w-100" alt="" />
                         </div>
                     </div>
-                    <h5 className="mt-2 fw-light">advances one slide at a time</h5>
+                    <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span className="visually-hidden">Previous</span>
+                    </button>
+                    <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                        <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span className="visually-hidden">Next</span>
+                    </button>
                 </div>
            </div>
         </div>
