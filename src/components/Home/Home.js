@@ -22,9 +22,9 @@ const Home = () => {
     })
 
     return (
-        <div className='container '>
-           <div className='row'>
-                <div className='col-md-4'>\
+        <div className='container'>
+           <div className='row mt-5'>
+                <div className='col-md-4 text-white'>
                     <h1>Cox's Bazar</h1>
                 </div>
                 <div className="col-md-8 text-center my-3">
@@ -62,10 +62,10 @@ const Home = () => {
                                     </div>
                                 </div>
                             </div>
-                            <a className="bg-transparent w-aut" href="#" role="button" data-bs-slide="prev">
+                            <a className="bg-transparent w-aut" href="#recipeCarousel" role="button" data-bs-slide="prev">
                                 <span className="carousel-control-prev-icon" aria-hidden="true"></span>
                             </a>
-                            <a className="bg-transparent w-aut" href="#" role="button" data-bs-slide="next">
+                            <a className="bg-transparent w-aut" href="#recipeCarousel" role="button" data-bs-slide="next">
                                 <span className="carousel-control-next-icon" aria-hidden="true"></span>
                             </a>
                         </div>
