@@ -1,13 +1,25 @@
 import React from 'react';
 import { Button, Container, Form, Nav, Navbar } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import logo from '../../images/logo.png';
 import './Header.css';
 
 const Header = () => {
-    const textLight = "text-light";
+    const { pathname } = useLocation();
+
+    let loginStyle, color;
+    if(pathname === '/login'){
+        loginStyle = {
+            backgroundColor: "white"
+        };
+        color = 'text-dark';
+    }
+    else{
+        color = 'text-light';
+    }
+
     return (
-        <div>
+        <div style={loginStyle}>
             <Navbar expand="lg" className='pt-4'>
                 <Container>
                     <Navbar.Brand className='me-5'>
@@ -22,19 +34,19 @@ const Header = () => {
                             className="me-2 input-bg border border-white"
                             aria-label="Search"
                             />
-                            <Button variant="btn btn-light">Search</Button>
+                            <Button variant="outline-light">Search</Button>
                         </Form>
                         <Nav
                             className="my-2 my-lg-c0"
                             style={{ maxHeight: '100px' }}
                             navbarScroll
                         >
-                            <Link className={`text-decoration-none ${textLight} navlink`} to='/news'>News</Link>
-                            <Link className={`text-decoration-none ${textLight} navlink`} to='/destination'>Destination</Link>
-                            <Link className={`text-decoration-none ${textLight} navlink`} to='/blog'>Blog</Link>
-                            <Link className={`text-decoration-none ${textLight} navlink`} to='/contact'>Contact</Link>
+                            <Link className={`text-decoration-none ${color} navlink`} to='/news'>News</Link>
+                            <Link className={`text-decoration-none ${color} navlink`} to='/destination'>Destination</Link>
+                            <Link className={`text-decoration-none ${color} navlink`} to='/blog'>Blog</Link>
+                            <Link className={`text-decoration-none ${color} navlink`} to='/contact'>Contact</Link>
                         </Nav>
-                            <Button className='ms-3' variant="warning"><Link className='text-decoration-none text-dark' to='/login'>Login</Link></Button>
+                        <Link className='text-decoration-none text-dark' to='/login'><Button className='ms-3' variant="warning">Login</Button></Link>
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
