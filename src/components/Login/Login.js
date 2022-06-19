@@ -2,8 +2,8 @@ import React from 'react';
 
 const Login = () => {
     return (
-        <div className='container'>
-            <form className='mx-auto w-50 bg-white p-5 mt-5'>
+        <div style={{background: "white"}}>
+            <form className='mx-auto w-50 bg-white p-5'>
                 <div className="mb-5">
                     {/* <label htmlFor="exampleInputEmail1" className="form-label">Email address</label> */}
                     <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
