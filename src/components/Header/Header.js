@@ -1,7 +1,8 @@
 import React from 'react';
 import { Button, Container, Form, Nav, Navbar } from 'react-bootstrap';
 import { Link, useLocation } from 'react-router-dom';
-import logo from '../../images/logo.png';
+import logoLight from '../../images/logo-light.png';
+import logoDark from '../../images/logo-dark.png';
 import './Header.css';
 
 const Header = () => {
@@ -23,7 +24,7 @@ const Header = () => {
             <Navbar expand="lg" className='pt-4'>
                 <Container>
                     <Navbar.Brand className='me-5'>
-                        <Link to='/home'><img style={{width: '100px'}} src={logo} /></Link>
+                        <Link to='/home'><img style={{width: '100px'}} src={ pathname === '/login' ? logoDark : logoLight } /></Link>
                         </Navbar.Brand>
                     <Navbar.Toggle aria-controls="navbarScroll" />
                     <Navbar.Collapse id="navbarScroll">
