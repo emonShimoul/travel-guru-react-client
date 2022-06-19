@@ -8,6 +8,7 @@ import Home from './components/Home/Home';
 import Login from './components/Login/Login';
 import Header from './components/Header/Header';
 import News from './components/News/News';
+import Register from './components/Register/Register';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path='/blog' element={<Blog />}></Route>
           <Route path='/contact' element={<Contact />}></Route>
           <Route path='/login' element={<Login />}></Route>
+          <Route path='/register' element={<Register />}></Route>
         </Routes>
       </BrowserRouter>
     </div>
