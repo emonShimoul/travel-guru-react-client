@@ -9,7 +9,7 @@ const Header = () => {
     const { pathname } = useLocation();
 
     let loginStyle, color;
-    if(pathname === '/login'){
+    if(pathname === '/login' || pathname === '/register'){
         loginStyle = {
             backgroundColor: "white"
         };
@@ -24,7 +24,7 @@ const Header = () => {
             <Navbar expand="lg" className='pt-4'>
                 <Container>
                     <Navbar.Brand className='me-5'>
-                        <Link to='/home'><img style={{width: '100px'}} src={ pathname === '/login' ? logoDark : logoLight } /></Link>
+                        <Link to='/home'><img style={{width: '100px'}} src={ pathname === '/login' ? logoDark : pathname === '/register' ? logoDark : logoLight } alt="" /></Link>
                         </Navbar.Brand>
                     <Navbar.Toggle aria-controls="navbarScroll" />
                     <Navbar.Collapse id="navbarScroll">
