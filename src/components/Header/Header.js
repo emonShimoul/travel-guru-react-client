@@ -8,15 +8,17 @@ import './Header.css';
 const Header = () => {
     const { pathname } = useLocation();
 
-    let loginStyle, color;
+    let loginStyle, color, display;
     if(pathname === '/login' || pathname === '/register'){
         loginStyle = {
             backgroundColor: "white"
         };
         color = 'text-dark';
+        display='d-none';
     }
     else{
         color = 'text-light';
+        display='';
     }
 
     return (
@@ -29,15 +31,15 @@ const Header = () => {
                     <Navbar.Toggle aria-controls="navbarScroll" />
                     <Navbar.Collapse id="navbarScroll">
                         
-                        <Form className="d-flex me-auto">
-                        <Form.Control
-                        type="search"
-                        placeholder="Search Your Destination..."
-                        className="me-2 input-bg border border-white"
-                        aria-label="Search"
-                        />
-                        <Button variant="outline-light">Search</Button>
-                        </Form>
+                    <Form className="d-flex me-auto">
+                    <Form.Control
+                    type="search"
+                    placeholder="Search Your Destination..."
+                    className={`me-2 input-bg border border-white ${display}`}
+                    aria-label="Search"
+                    />
+                    <Button variant="outline-light" className={`${display}`}>Search</Button>
+                    </Form>
                         
                         <Nav
                             className="my-2 my-lg-c0"
