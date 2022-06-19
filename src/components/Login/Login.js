@@ -20,7 +20,10 @@ const Login = () => {
                     </div>
                     <button type="submit" className="btn btn-warning login-btn mb-3">Submit</button>
                     <p>Don't have an account? <Link to="/register" className='text-warning'>Create an account</Link></p>
-                </form>
+                </form><br />
+                <p>------------------------------------------ Or ------------------------------------------</p>
+                <button type="submit" className="btn btn-outline-secondary mb-3 me-2 rounded-pill">Continue with Facebook</button>
+                <button type="submit" className="btn btn-outline-secondary mb-3 rounded-pill">Continue with Google</button>
             </div>
         </div>
     );
