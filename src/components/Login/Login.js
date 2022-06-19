@@ -1,11 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Login.css';
 
 const Login = () => {
     return (
         <div style={{background: "white"}}>
             <div className="container pt-5">
-                <form className='mx-auto w-50 bg-white p-5 border'>
+                <form className='mx-auto w-50 bg-white px-5 pt-5 pb-4 border'>
                 <h3 className='pb-4 text-start'>Login</h3>
                     <div className="mb-5">
                         {/* <label htmlFor="exampleInputEmail1" className="form-label">Email address</label> */}
@@ -20,7 +21,8 @@ const Login = () => {
                         <input type="checkbox" className="me-2" id="exampleCheck1" />
                         <label className="form-check-label" htmlFor="exampleCheck1">Check me out</label>
                     </div>
-                    <button type="submit" className="btn btn-warning login-btn">Submit</button>
+                    <button type="submit" className="btn btn-warning login-btn mb-3">Submit</button>
+                    <p>Don't have an account? <Link to="/register" className='text-warning'>Create an account</Link></p>
                 </form>
             </div>
         </div>
