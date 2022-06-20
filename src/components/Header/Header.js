@@ -8,6 +8,7 @@ import './Header.css';
 const Header = () => {
     const { pathname } = useLocation();
 
+    // logic for different navbar styles for login and registration route
     let loginStyle, color, display;
     if(pathname === '/login' || pathname === '/register'){
         loginStyle = {
