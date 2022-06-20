@@ -9,7 +9,7 @@ const Login = () => {
                 <form className='mx-auto w-50 bg-white px-5 pt-5 pb-4 border'>
                 <h3 className='pb-4 text-start'>Login</h3>
                     <div className="mb-5">
-                        <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+                        <input type="email" className="form-control" id="exampleInputEmail1" />
                     </div>
                     <div className="mb-3">
                         <input type="password" className="form-control" id="exampleInputPassword1" />
