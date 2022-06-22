@@ -13,3 +13,19 @@
         padding: 0.7rem 9rem;
     }
 }
+
+@media only screen and (min-width: 1400px) {
+    .register-btn {
+        padding: 0.7rem 12.5rem;
+    }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+    .register-btn {
+        padding: 0.7rem 9.5rem;
+    }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .register-btn {
+        padding: 0.7rem 7rem;
+    }
+}
