@@ -1,14 +1,21 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import useFirebase from '../../hooks/useFirebase';
 import './Login.css';
 
 const Login = () => {
     const {signInUsingGoogle, user} = useFirebase();
+    const navigate = useNavigate();
+    const location = useLocation();
+    const redirect_uri = location.state?.from || '/';
+
     // console.log(user.user?.email);
 
     const handleGoogleLogin = () => {
-        signInUsingGoogle();
+        signInUsingGoogle()
+        .then(result => {
+            navigate(redirect_uri);
+        })
     }
 
     return (
