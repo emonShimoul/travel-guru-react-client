@@ -8,8 +8,8 @@ import useFirebase from '../../hooks/useFirebase';
 
 const Header = () => {
     const { pathname } = useLocation();
-    const {user} = useFirebase();
-    console.log("user: ",user);
+    const {user, logOut} = useFirebase();
+    // console.log("user: ",user);
 
     // logic for different navbar styles for login and registration route
     let loginStyle, color, display;
@@ -56,7 +56,10 @@ const Header = () => {
                             <Link className={`text-decoration-none ${color} navlink`} to='/contact'>Contact</Link>
                         </Nav>
                         {
-                            user?.email ? <button>Logout</button> :
+                            user?.email ? <div>
+                            <span>Hello, {user.displayName} </span> 
+                            <button onClick={logOut}>Logout</button> 
+                            </div> :
                             <Link className='text-decoration-none text-dark' to='/login'><Button className='ms-3' variant="warning">Loginnnn</Button></Link>
                         }
                     </Navbar.Collapse>
