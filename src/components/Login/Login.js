@@ -5,7 +5,7 @@ import './Login.css';
 
 const Login = () => {
     const {signInUsingGoogle, user} = useFirebase();
-    console.log(user);
+    console.log(user.user?.email);
 
     return (
         <div style={{background: "white"}}>

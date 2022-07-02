@@ -4,9 +4,12 @@ import { Link, useLocation } from 'react-router-dom';
 import logoLight from '../../images/logo-light.png';
 import logoDark from '../../images/logo-dark.png';
 import './Header.css';
+import useFirebase from '../../hooks/useFirebase';
 
 const Header = () => {
     const { pathname } = useLocation();
+    const {user} = useFirebase();
+    console.log("user: ",user);
 
     // logic for different navbar styles for login and registration route
     let loginStyle, color, display;
@@ -52,7 +55,10 @@ const Header = () => {
                             <Link className={`text-decoration-none ${color} navlink`} to='/blog'>Blog</Link>
                             <Link className={`text-decoration-none ${color} navlink`} to='/contact'>Contact</Link>
                         </Nav>
-                        <Link className='text-decoration-none text-dark' to='/login'><Button className='ms-3' variant="warning">Login</Button></Link>
+                        {
+                            user?.email ? <button>Logout</button> :
+                            <Link className='text-decoration-none text-dark' to='/login'><Button className='ms-3' variant="warning">Loginnnn</Button></Link>
+                        }
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
