@@ -9,7 +9,6 @@ import useFirebase from '../../hooks/useFirebase';
 const Header = () => {
     const { pathname } = useLocation();
     const {user, logOut} = useFirebase();
-    // console.log("user: ",user);
 
     // logic for different navbar styles for login and registration route
     let loginStyle, color, display;

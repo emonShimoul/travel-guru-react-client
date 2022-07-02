@@ -4,12 +4,10 @@ import useFirebase from '../../hooks/useFirebase';
 import './Login.css';
 
 const Login = () => {
-    const {signInUsingGoogle, user} = useFirebase();
+    const {signInUsingGoogle} = useFirebase();
     const navigate = useNavigate();
     const location = useLocation();
     const redirect_uri = location.state?.from || '/';
-
-    // console.log(user.user?.email);
 
     const handleGoogleLogin = () => {
         signInUsingGoogle()
