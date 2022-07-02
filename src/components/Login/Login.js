@@ -7,6 +7,10 @@ const Login = () => {
     const {signInUsingGoogle, user} = useFirebase();
     // console.log(user.user?.email);
 
+    const handleGoogleLogin = () => {
+        signInUsingGoogle();
+    }
+
     return (
         <div style={{background: "white"}}>
             <div className="container pt-5">
@@ -27,7 +31,7 @@ const Login = () => {
                 </form><br />
                 <p>------------------------------------------ Or ------------------------------------------</p>
                 <button type="submit" className="btn btn-primary mb-3 me-2 rounded-pill">Continue with Facebook</button>
-                <button type="submit" className="btn btn-secondary mb-3 rounded-pill" onClick={signInUsingGoogle}>Continue with Google</button>
+                <button type="submit" className="btn btn-secondary mb-3 rounded-pill" onClick={handleGoogleLogin}>Continue with Google</button>
             </div>
         </div>
     );
