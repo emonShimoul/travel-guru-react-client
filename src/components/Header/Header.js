@@ -57,10 +57,10 @@ const Header = () => {
                         </Nav>
                         {
                             user?.email ? <div>
-                            <span>Hello, {user.displayName} </span> 
-                            <button onClick={logOut}>Logout</button> 
+                            <span className='text-info fw-bold pe-2'>Hello, {user.displayName}</span> 
+                            <button className='btn btn-secondary' onClick={logOut}>Logout</button> 
                             </div> :
-                            <Link className='text-decoration-none text-dark' to='/login'><Button className='ms-3' variant="warning">Loginnnn</Button></Link>
+                            <Link className='text-decoration-none text-dark' to='/login'><Button className='ms-3' variant="warning">Login</Button></Link>
                         }
                     </Navbar.Collapse>
                 </Container>
