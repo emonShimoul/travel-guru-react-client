@@ -50,6 +50,7 @@ const Header = () => {
                             style={{ maxHeight: '100px' }}
                             navbarScroll
                         >
+                            <Link className={`text-decoration-none ${color} navlink`} to='/'>Home</Link>
                             <Link className={`text-decoration-none ${color} navlink`} to='/news'>News</Link>
                             <Link className={`text-decoration-none ${color} navlink`} to='/destination'>Destination</Link>
                             <Link className={`text-decoration-none ${color} navlink`} to='/blog'>Blog</Link>
